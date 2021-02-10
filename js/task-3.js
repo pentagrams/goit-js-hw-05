@@ -7,12 +7,13 @@ Storage.prototype.getItems = function (items) {
 };
 
 Storage.prototype.addItem = function (item) {
-  this.items.push(item)
+  this.items.push(item);
   return this.items;
 }
 
 Storage.prototype.removeItem = function (item) {
-  this.items.
+  let i = this.items.indexOf(item, 0);
+  this.items.splice(i, 1); 
 }
 
 
