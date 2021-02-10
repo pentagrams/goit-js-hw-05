@@ -3,9 +3,16 @@ class StringBuilder {
     constructor(_value) {
     this._value = _value;
   }
-}
 
+  get value() { }
 
+  static append(str) { }
+
+  static prepend(str) { }
+
+  static pad(str) { }
+  
+} 
 
 
 
