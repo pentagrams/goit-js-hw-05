@@ -4,13 +4,24 @@ class StringBuilder {
     this._value = _value;
   }
 
-  get value() { }
+  get value() { 
+    return this._value;
+  }
 
-  static append(str) { }
+  append(str) { 
+    this._value = this._value + str;
+    return this._value;
+  }
 
-  static prepend(str) { }
+  prepend(str) { 
+    this._value = str + this._value;
+    return this._value
+  }
 
-  static pad(str) { }
+  pad(str) { 
+    this._value = str + this._value + str;
+    return this._value;
+  }
   
 } 
 
