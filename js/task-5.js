@@ -15,20 +15,29 @@ class Car {
    *  isOn - заведен ли автомобиль, значения true или false. Изначально false
    *  distance - общий киллометраж, изначально 0
    */
-      constructor({ speed, price, maxSpeed, isOn, distance }) {
+    constructor({ speed = 0, price, maxSpeed, isOn, distance = 0 }) {
             this.speed = speed;
             this.price = price;
             this.maxSpeed = maxSpeed;
             this.isOn = isOn;
             this.distance = distance;
-      }
-      
-      
-
+  }
+  
+  static getSpecs(car) {
+    console.log(
+      this.maxSpeed,
+      this.speed,
+      this.isOn,
+      this.distance,
+      this.price
+    );
+  }
   /*
    * Добавь геттер и сеттер для свойства price,
    * который будет работать с свойством цены автомобиля.
    */
+
+  get 
 
   /*
    * Добавь код для того чтобы завести автомобиль
