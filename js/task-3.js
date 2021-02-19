@@ -12,8 +12,13 @@ Storage.prototype.addItem = function (item) {
 }
 
 Storage.prototype.removeItem = function (item) {
-  let i = this.items.indexOf(item, 0);
-  this.items.splice(i, 1); 
+  if (this.items.includes(item)) {
+    let i = this.items.indexOf(item, 0);
+    this.items.splice(i, 1);
+  } else {
+   console.log(`элемента ${item} не найдено`)
+  }
+   
 }
 
 
@@ -31,5 +36,5 @@ console.table(items); // [ "Нанитоиды", "Пролонгер", "Желе
 storage.addItem('Дроид');
 console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
 
-storage.removeItem('Пролонгер');
+storage.removeItem('Пролонге');
 console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
